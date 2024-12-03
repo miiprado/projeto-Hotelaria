@@ -1,0 +1,383 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 140px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: rgb(13, 60, 61);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top:0;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    right: 0px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    right: 0px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.login-box, .register-box {
+    width: 400px;
+    height: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #141414;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin-top: 150px;
+}
+
+.login-box img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 300px;
+}
+
+.login-box #bemvindo{
+    font-family:sans-serif;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: rgb(13, 60, 61);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.login-box #reservarquarto{
+    font-family:sans-serif;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: rgb(13, 60, 61);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgb(13, 60, 61);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.login-box button:hover {
+    background-color: #141414;
+    color: white;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(13, 60, 61);
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+
+option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+select:focus {
+    border-color: #141414;
+    outline: none;
+}
+
+option:hover {
+    background-color: rgb(13, 60, 61);
+    color: white;
+}
+
+input[type="date"], input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(13, 60, 61);
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+
+input[type="date"]:focus {
+    border-color: #141414;
+    outline: none;
+}
+
+input[type="date"]::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: rgb(13, 60, 61);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos */
+}
+c
+.sobre, .quartos, .serviços, .localização, .contato {
+    padding: 20px;
+    display: flex;
+    width: 84%;
+    margin-left: 250px;
+    margin-left: 250px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(13, 60, 61);
+    border-radius: 15px;
+}
+
+.info-section {
+    margin-bottom: 40px;
+    flex: 1;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    text-align: justify;
+    hyphens: auto; /* Deixa o espaçamento das palavras mais uniforme */
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+}
+
+.info-img img {
+    display: flex;
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-left: 30px; /* Espaço entre o texto e a imagem */
+    margin-right: 100px;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.menu-lateral {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    position: fixed;
+    top: 84px;
+    left: 0;
+    height: calc(100% - 80px);
+    width: 200px;
+    z-index: 10;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: rgb(13, 60, 61);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-links a:hover {
+    background-color: rgb(13, 60, 61);
+    color: white;
+}
+
+main{
+    margin-top: 90px;
+}
+
+.link, #linktexto{
+    color: rgb(13, 60, 61);
+}
+
+.link{
+    cursor: pointer;
+}
+
+#buttonsReserva {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espaço entre os botões */
+    width: 100%; /* Garante que os botões ocupem toda a largura do contêiner */
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+#confirmarReserva, #cancelarReserva {
+    width: 50%; /* Ajuste para garantir que os botões fiquem ao lado um do outro */
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(13, 60, 61);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.quarto-box {
+    width: 80%;
+    height: 400%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #141414;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin-top: 150px;
+}
+
+.quarto {
+    display: flex;
+    justify-content: space-between; /* Espaço entre a imagem e as informações */
+    align-items: center; /* Alinha verticalmente no centro */
+    border: 2px solid rgb(13, 60, 61);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Espaço entre os quadrados de cada quarto */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    width: 90%; /* Ajuste a largura conforme necessário */
+    height: 30%;
+}
+
+.quarto .info {
+    flex: 1; /* Faz as informações ocuparem o máximo de espaço disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.quarto img {
+    width: 40%;
+    background-color: rgb(200, 200, 200); /* Cor de fundo como placeholder */
+    border-radius: 10px;
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    margin-left: 20px;
+}
+
+.quarto h1{
+    margin-bottom: 40px;
+}
+
+.quarto p{
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: rgb(13, 60, 61);
+}
+
+.lista {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os hóspedes */
+}
+
+/* Estilo para cada hóspede */
+.nomehospede {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(13, 60, 61);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.buttonhospedes{
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+
+.lista2{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Espaço entre os hóspedes */
+    border: 2px solid rgb(13, 60, 61);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.listaserviços label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(13, 60, 61);
+}
+
+.lista2 h1{
+    font-family:sans-serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lista2 p{
+    font-weight: bold;
+    color: rgb(13, 60, 61);
+}

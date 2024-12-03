@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Hotel Encantado</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <img src="../logo.png" width="200px">
+    <nav>
+      
+      <a href="../inicio.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="quartos.html">Acomodações</a>
+    </nav>
+  </header>
+  <main class="login-box">
+    <h1>Realizar Cadastro</h1>
+    <div id="cadastroUsuario">
+      <form>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="number" min="10000000000" max="99999999999" id="cpf" placeholder="Digite seu CPF" required>
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" id="data-nascimento" required>
+
+        <label for="endereco">Endereço Completo:</label>
+        <input type="text" id="endereco" placeholder="Digite seu endereço" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Digite seu email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="number" min="1000000" max="9999999" id="telefone" placeholder="Digite seu telefone" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+        <a href="login.html"><button type="submit">Cadastrar</button></a>
+      </form>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+
+</html>
