@@ -18,18 +18,18 @@
       <a href="contabilidade.html">Contabilidade</a>
       <a href="listaClientes.html">Gerenciar Hóspedes</a>
       <a href="reservaFunc.html"> Gerenciar Reservas</a>
-      <a href="../inicio.html">Fazer Logout</a>
+      <button class="logout" id="logout" onclick="usuarioEncontrado=null; window.location.href='../inicio.html'">Fazer Logout</button>
     </nav>
   </header>
   <main class="login-box">
     <h1>Realizar Cadastro</h1>
-    <div id="reservarquarto">
+    <div id="cadastroUsuario">
       <form>
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" placeholder="Digite seu nome completo" required>
 
         <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+        <input type="number" min="10000000000" max="99999999999" id="cpf" placeholder="Digite seu CPF" required>
 
         <label for="data-nascimento">Data de Nascimento:</label>
         <input type="date" id="data-nascimento" required>
@@ -41,12 +41,12 @@
         <input type="email" id="email" placeholder="Digite seu email" required>
 
         <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" placeholder="Digite seu telefone" required>
+        <input type="number" min="1000000" max="9999999" id="telefone" placeholder="Digite seu telefone" required>
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" placeholder="Digite sua senha" required>
 
-        <a href="login.html"><button type="submit">Cadastrar</button></a>
+       <button type="submit">Cadastrar</button>
       </form>
     </div>
   </main>
