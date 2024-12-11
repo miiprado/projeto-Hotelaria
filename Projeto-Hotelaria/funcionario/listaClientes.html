@@ -16,23 +16,30 @@
       <a href="sobreFunc.html">Sobre Nós</a>
       <a href="quartosFunc.html">Acomodações</a>
       <a href="contabilidade.html">Contabilidade</a>
-      <a href="listaClientes.html">Gerenciar Hóspedes</a>
-      <a href="reservaFunc.html"> Gerenciar Reservas</a>
-      <a href="../inicio.html">Fazer Logout</a>
+      <a href="listaClientes.html">Lista Reservas</a>
+      <a href="reservaFunc.html"> Fazer reserva</a>
+      <a href="atualizarDadosFunc.html">Atualizar Cadastro</a>
+      <button onclick="fazerLogout()">Fazer Logout</button>
     </nav>
   </header>
 
   <div class="login-box">
     <h2>Reservas</h2>
-    <div class="lista">
+    <div class="listaReservas">
       <div class="nomehospede">Hóspede 1</div>
-      <button class="buttonhospedes">Fazer Check-in</button> 
-      <button class="buttonhospedes">Excluir Reserva</button> <!-- adicionar função de excluir a reserva -->
-
+      <button class="buttonhospedes">Fazer Check-in</button>
+      <button class="buttonhospedes">Excluir Reserva</button>
+      <!-- adicionar função de excluir a reserva -->
       <div class="nomehospede">Hóspede 2</div>
       <button class="buttonhospedes">Fazer Check-in</button>
       <button class="buttonhospedes">Excluir Reserva</button>
     </div>
+
+    <main>
+      <h1>Lista de Reservas</h1>
+      <ul id="listaReservas"></ul>
+    </main>
+
     <!-- tem q ver como vai fazer p aparecer a lista de cliente aq no html -->
     </main>
   </div>

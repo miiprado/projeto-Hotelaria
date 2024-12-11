@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Hotel Encantado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="imagens/logo.png" width="200px">
+    <nav>
+      <a href="inicio.html">Início</a>
+      <a href="./cliente/sobre.html">Sobre Nós</a>
+      <a href="./cliente/quartos.html">Acomodações</a>
+    </nav>
+  </header>
+  <main>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form id  = "formularioLogin">
+        <label for="email_login">Email:</label>
+        <input type="email" id="email_login" placeholder="Digite seu email">
+
+        <label for="senha_login">Senha:</label>
+        <input type="password" id="senha_login" placeholder="Digite sua senha">
+          <button type="submit" >Entrar</button>
+        <div id="linktexto">Não tem um Login? <a href="./cliente/cadastro.html" class="link">Cadastre-se aqui!</a></div>
+      </form>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

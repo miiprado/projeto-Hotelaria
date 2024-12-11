@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualizar - Hotel Encantado</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <img src="../imagens/logo.png" width="200px">
+    <nav>
+      <a href="../inicio.html">Início</a>
+      <a href="sobreFunc.html">Sobre Nós</a>
+      <a href="quartosFunc.html">Acomodações</a>
+      <a href="contabilidade.html">Contabilidade</a>
+      <a href="listaClientes.html">Lista Reservas</a>
+      <a href="reservaFunc.html"> Fazer reserva</a>
+      <a href="atualizarDadosFunc.html">Atualizar Cadastro</a>
+      <button onclick="fazerLogout()">Fazer Logout</button>
+    </nav>
+  </header>
+  <main class="login-box">
+    <h1>Atualizar dados</h1>
+    <div>
+      <form id="AtualizarDadosCliente">
+
+        <select id="selecionarHospedeAtt">
+          <option value="32425442312" >1 </option>
+          <option value="12312312312">2</option>
+        </select>
+
+        <label for="att-endereco">Endereço</label>
+        <input type="text" id="att-endereco" placeholder="Digite seu novo endereço">
+
+        <label for="att-email">Email:</label>
+        <input type="email" id="att-email" placeholder="Digite seu novo email">
+
+        <label for="att-telefone">Telefone:</label>
+        <input type="number" min="1000000000" max="99999999999" id="att-telefone"
+          placeholder="Digite seu novo telefone">
+
+        <label for="att-senha">Senha:</label>
+        <input type="password" id="att-senha" placeholder="Digite sua nova senha">
+
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+    <div>
+      <div>
+        <hr>
+        <h1>Excluir Cadastro</h1>
+        <form id=" excluirCadastroa">
+
+          <label for="selecionarHospedeExcluir">Selecione o Hóspede </label>
+          <select id="selecionarHospedeExcluir">
+            <option value="" disabled selected>Selecionar Hospede</option>
+          </select>
+          <button type="submit">Excluir cadastro </button>
+        </form>
+      </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+
+</html>

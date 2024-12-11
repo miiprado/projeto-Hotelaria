@@ -11,14 +11,16 @@
 <body>
 
     <header>
-        <img src="../imagens/logo.png" width="200px">
         <nav>
             <a href="../inicio.html">Início</a>
             <a href="sobre.html">Sobre Nós</a>
             <a href="quartos.html">Acomodações</a>
-            <a href="reservas.html">Reserva</a>
+            <a href="reservas.html">Nova Reserva</a>
+            <a href="listaReservas.html">Minhas Reservas</a>
             <a href="cadastro.html">Cadastro</a>
-            <a href="../inicio.html">Fazer Logout</a>
+            <a href="atualizarDados.html">Atualizar Cadastro</a>
+
+            <button onclick="fazerLogout()">Fazer Logout</button>
         </nav>
     </header>
 
@@ -27,9 +29,13 @@
         <form id="formReserva" onsubmit="event.preventDefault(); calcularPreco();">
             <label for="tipoQuarto">Tipo de Quarto:</label>
             <select id="tipoQuarto" required>
-                <option value="pequeno">Pequeno (R$100/dia)</option>
-                <option value="medio">Médio (R$200/dia)</option>
-                <option value="grande">Grande (R$300/dia)</option>
+                <option value="Suite Luxo" id ="Suite Luxo"> Suite Luxo(R$250/dia)</option>
+                <option value="Suite Master" id ="Suite Master" >Suite Master (R$300/dia)</option>
+                <option value="Suite Simples" id="Suite Simples">Suite Simples (R$150/dia)</option>
+                <option value="Suite Presidencial" id="Suite Presidencial">Suite Presidencial (R$500/dia)</option>
+                <option value="Suite Executiva" id ="Suite Executiva">Suite Executiva (R$350/dia)</option>
+                <option value="Family Suite" id="Family Suite">Family Suite (R$400/dia)</option>
+
             </select>
 
             <label for="checkIn">Data Check-in:</label>
@@ -42,10 +48,10 @@
         </form>
         <p id="precoTotal" style="margin-top: 20px; font-weight: bold;"></p>
         <div id="buttonsReserva">
-            <button id="confirmarReserva" style="display: none;" onclick="alert('Reserva confirmada!');">Confirmar
-                Reserva</button>
+            <button id="confirmarReserva" style="display: none;" onclick="confirmarReserva()" >ConfirmarReserva</button>
             <button id="cancelarReserva" style="display: none;" onclick="cancelarReserva()">Cancelar Reserva</button>
         </div>
+
     </main>
     <script src="../script.js"></script>
 </body>
