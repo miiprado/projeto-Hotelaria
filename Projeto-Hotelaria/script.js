@@ -135,7 +135,7 @@ function fazerLogout() {
     funcionarioLogado = null;
     salvarUsuarios();
     alert("Logout realizado.");
-    window.location.href = "../inicio.html";
+    window.location.href = "../Projeto-Hotelaria/login.html";
 }
 
 function atualizarDados(novaSenha, novoEndereco, novoEmail, novoTelefone) {
@@ -472,7 +472,31 @@ confirmarButton.addEventListener('click', () => {
 });
 
 
+// ========== Header =============
 
+document.addEventListener("DOMContentLoaded", () => {
+    const headerV = document.getElementById("visitante-header");
+    const headerU = document.getElementById("usuario-header");
+    const headerF = document.getElementById("funcionario-header");
+
+    // Verifica o estado do login de usuário e funcionário
+    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+    const funcionarioLogado = JSON.parse(localStorage.getItem("funcionarioLogado"));
+
+    // Inicializa a visibilidade de todos os headers como invisível
+    headerV.style.display = "none";
+    headerU.style.display = "none";
+    headerF.style.display = "none";
+
+    // Mostrar o header correspondente ao tipo de usuário
+    if (usuarioLogado) {
+        headerU.style.display = "flex"; // Exibe header para cliente
+    } else if (funcionarioLogado) {
+        headerF.style.display = "flex"; // Exibe header para funcionário
+    } else {
+        headerV.style.display = "flex"; // Exibe header para visitante
+    }
+});
 //  ========= Validações ========
 
 

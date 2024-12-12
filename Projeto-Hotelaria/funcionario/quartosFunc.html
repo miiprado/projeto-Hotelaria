@@ -9,10 +9,18 @@
 </head>
 
 <body>
-  <header>
+  <header id="visitante-header">
+    <img src="imagens/logo.png" width="200px">
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="./cliente/sobre.html">Sobre Nós</a>
+      <a href="./cliente/quartos.html">Acomodações</a>
+    </nav>
+  </header>
+
+  <header id="funcionario-header">
     <img src="../imagens/logo.png" width="200px">
     <nav>
-      <a href="../inicio.html">Início</a>
       <a href="sobreFunc.html">Sobre Nós</a>
       <a href="quartosFunc.html">Acomodações</a>
       <a href="contabilidade.html">Contabilidade</a>
@@ -21,7 +29,20 @@
       <a href="atualizarDadosFunc.html">Atualizar Cadastro</a>
       <button onclick="fazerLogout()">Fazer Logout</button>
   </nav>
+  </header>
 
+  <header id="usuario-header">
+    <img src="../imagens/logo.png" width="200px">
+    <nav>
+      <a href="./cliente/sobre.html">Sobre Nós</a>
+      <a href="./cliente/quartos.html">Acomodações</a>
+      <a href="./cliente/reservas.html">Nova Reserva</a>
+      <a href="./cliente/listaReservas.html">Minhas Reservas</a>
+      <a href="./cliente/cadastro.html">Cadastro</a>
+      <a href="./cliente/atualizarDados.html">Atualizar Cadastro</a>
+
+      <button onclick="fazerLogout()">Fazer Logout</button>
+  </nav>
   </header>
   <main class="quarto-box">
     <h1>Lista de quartos</h1>
