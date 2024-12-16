@@ -86,7 +86,7 @@ function salvarUsuarios() {
 
 function carregarUsuarios() {
     const reservasSalvas = localStorage.getItem('reservas')
-    if(reservasSalvas) reservas= JSON.parse(reservasSalvas);
+    if(reservasSalvas) reservas = JSON.parse(reservasSalvas);
      
     const usuariosSalvos = localStorage.getItem('usuarios');
     if (usuariosSalvos) usuarios = JSON.parse(usuariosSalvos);
@@ -407,8 +407,6 @@ exibirReservas()
 
 // ================ CONTABILIDADE =================
 
-
-
 carregarUsuarios();
 
 const calcularButton = document.getElementById('calcular');
@@ -497,6 +495,5 @@ document.addEventListener("DOMContentLoaded", () => {
         headerV.style.display = "flex"; // Exibe header para visitante
     }
 });
+
 //  ========= Validações ========
-
-

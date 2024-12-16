@@ -2,81 +2,54 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas - Hotel</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - Hotel</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-    <header id="visitante-header">
+  <header>
     <img src="imagens/logo.png" width="200px">
     <nav>
-      <a href="login.html">Login</a>
-      <a href="./cliente/sobre.html">Sobre Nós</a>
+      <a href="./cliente/sobre.html">Inicio</a>
       <a href="./cliente/quartos.html">Acomodações</a>
+      <a href="reservas.html">Reserva</a>
+      <a href="login.html">Login</a>
     </nav>
   </header>
 
-  <header id="funcionario-header">
-    <img src="../imagens/logo.png" width="200px">
-    <nav>
-      <a href="./funcionario/sobreFunc.html">Sobre Nós</a>
-      <a href="./funcionario/quartosFunc.html">Acomodações</a>
-      <a href="./funcionario/contabilidade.html">Contabilidade</a>
-      <a href="./funcionario/listaClientes.html">Lista Reservas</a>
-      <a href="./funcionario/reservaFunc.html"> Fazer reserva</a>
-      <a href="./funcionario/atualizarDadosFunc.html">Atualizar Cadastro</a>
-      <button onclick="fazerLogout()">Fazer Logout</button>
-  </nav>
-  </header>
+  <main class="login-box">
+    <div id="reservarquarto">Reservar Quarto</div>
+    <form id="formReserva" onsubmit="event.preventDefault(); calcularPreco();">
+      <label for="tipoQuarto">Tipo de Quarto:</label>
+      <select id="tipoQuarto" required>
+        <option value="Suite Luxo" id="Suite Luxo"> Suite Luxo(R$250/dia)</option>
+        <option value="Suite Master" id="Suite Master">Suite Master (R$300/dia)</option>
+        <option value="Suite Simples" id="Suite Simples">Suite Simples (R$150/dia)</option>
+        <option value="Suite Presidencial" id="Suite Presidencial">Suite Presidencial (R$500/dia)</option>
+        <option value="Suite Executiva" id="Suite Executiva">Suite Executiva (R$350/dia)</option>
+        <option value="Family Suite" id="Family Suite">Family Suite (R$400/dia)</option>
 
-  <header id="usuario-header">
-    <img src="../imagens/logo.png" width="200px">
-    <nav>
-      <a href="../login.html">Login</a>
-      <a href="sobre.html">Sobre Nós</a>
-      <a href="quartos.html">Acomodações</a>
-      <a href="reservas.html">Nova Reserva</a>
-      <a href="listaReservas.html">Minhas Reservas</a>
-      <a href="cadastro.html">Cadastro</a>
-      <a href="atualizarDados.html">Atualizar Cadastro</a>
+      </select>
 
-      <button onclick="fazerLogout()">Fazer Logout</button>
-  </nav>
-  </header>
+      <label for="checkIn">Data Check-in:</label>
+      <input type="date" id="checkIn" required>
 
-    <main class="login-box">
-        <div id="reservarquarto">Reservar Quarto</div>
-        <form id="formReserva" onsubmit="event.preventDefault(); calcularPreco();">
-            <label for="tipoQuarto">Tipo de Quarto:</label>
-            <select id="tipoQuarto" required>
-                <option value="Suite Luxo" id ="Suite Luxo"> Suite Luxo(R$250/dia)</option>
-                <option value="Suite Master" id ="Suite Master" >Suite Master (R$300/dia)</option>
-                <option value="Suite Simples" id="Suite Simples">Suite Simples (R$150/dia)</option>
-                <option value="Suite Presidencial" id="Suite Presidencial">Suite Presidencial (R$500/dia)</option>
-                <option value="Suite Executiva" id ="Suite Executiva">Suite Executiva (R$350/dia)</option>
-                <option value="Family Suite" id="Family Suite">Family Suite (R$400/dia)</option>
+      <label for="checkOut">Data Check-out:</label>
+      <input type="date" id="checkOut" required>
 
-            </select>
+      <button type="submit">Calcular Preço</button>
+    </form>
+    <p id="precoTotal" style="margin-top: 20px; font-weight: bold;"></p>
+    <div id="buttonsReserva">
+      <button id="confirmarReserva" style="display: none;" onclick="confirmarReserva()">ConfirmarReserva</button>
+      <button id="cancelarReserva" style="display: none;" onclick="cancelarReserva()">Cancelar Reserva</button>
+    </div>
 
-            <label for="checkIn">Data Check-in:</label>
-            <input type="date" id="checkIn" required>
-
-            <label for="checkOut">Data Check-out:</label>
-            <input type="date" id="checkOut" required>
-
-            <button type="submit">Calcular Preço</button>
-        </form>
-        <p id="precoTotal" style="margin-top: 20px; font-weight: bold;"></p>
-        <div id="buttonsReserva">
-            <button id="confirmarReserva" style="display: none;" onclick="confirmarReserva()" >ConfirmarReserva</button>
-            <button id="cancelarReserva" style="display: none;" onclick="cancelarReserva()">Cancelar Reserva</button>
-        </div>
-
-    </main>
-    <script src="../script.js"></script>
+  </main>
+  <script src="../script.js"></script>
 </body>
 
 </html>

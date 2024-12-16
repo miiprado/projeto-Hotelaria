@@ -5,9 +5,14 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'poppins', sans-serif;
     background-color: white;
     color: black;
+}
+
+body h1{
+    font-family: 'merriwheater';
+    font-size: 25px;
 }
 
 header {
@@ -178,74 +183,23 @@ form {
 .sobre, .quartos, .serviços, .localização, .contato {
     padding: 20px;
     display: flex;
+    flex-direction: column;
     width: 84%;
-    margin-left: 250px;
-    margin-left: 250px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(13, 60, 61);
+    margin-left: 100px;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
     border-radius: 15px;
 }
 
 .info-section {
-    margin-bottom: 40px;
     flex: 1;
 }
 
 .info-section p {
-    font-size: 1.1rem;
+    font-size: 17px;
     text-align: justify;
-    hyphens: auto; /* Deixa o espaçamento das palavras mais uniforme */
-    line-height: 1.6;
-    color: rgb(255, 255, 255);
-}
-
-.info-img img {
-    display: flex;
-    margin-top: 10px;
-    max-width: 100%;
-    border-radius: 8px;
-    margin-left: 30px; /* Espaço entre o texto e a imagem */
-    margin-right: 100px;
-    flex-shrink: 0; /* Impede que a imagem encolha */
-}
-
-.menu-lateral {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    position: fixed;
-    top: 84px;
-    left: 0;
-    height: calc(100% - 80px);
-    width: 200px;
-    z-index: 10;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-}
-
-.menu-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    gap: 30px;
-}
-
-.menu-links a {
-    text-decoration: none;
-    color: rgb(13, 60, 61);
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.menu-links a:hover {
-    background-color: rgb(13, 60, 61);
-    color: white;
+    line-height: 27px;
+    color: rgb(0, 0, 0);
 }
 
 main{
